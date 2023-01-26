@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "store.css">
+  
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+ />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+</head>
+<body>
+    <div class="container">
+<div class="logo">
+    <h1>My <span>Shop</span> </h1></div>
+<div class="navsection">
+    <nav>
+        <ul><li> <a href="#"></a> ALL</li></ul>
+        <ul><li> <a href="#"></a> Cakes</li></ul>
+        <ul><li> <a href="#"></a> chocolates</li></ul>
+    </nav>
+</div>
+<div class="inputall">
+    <i class="fas fa-search"></i>
+<input type="text" name="" id="" placeholder="items...">
+</div>
+<div class="cakecontainer">
+
+<div class="cake">
+<div class="content">
+    <img src="cake1.jpg" alt="" srcset="">
+</div>
+<div class="cakename"><p>BlackForest</p></div>
+</div>
+
+<div class="cake">
+    <div class="content">
+        <img src="cake2.jpg" alt="" srcset="">
+    </div>
+    <div class="cakename"><p>Choco</p></div>
+    </div> 
+
+    <div class="cake">
+        <div class="content">
+            <img src="cake3.jpg" alt="" srcset="">
+        </div>
+        <div class="cakename"><p>ChocoVanilla</p></div>
+        </div> 
+
+</div>
+<div class="chocolatecontainer">
+    <div class="chocolate">
+        <div class="content">
+            <img src="chocolate1.jpg" alt="" srcset="">
+        </div>
+        <div class="chocolatename"><p>chocolate1</p></div>
+        </div>
+
+        <div class="chocolate">
+            <div class="content">
+                <img src="chocolate2.jpg" alt="" srcset="">
+            </div>
+            <div class="chocolatename"><p>chocolate2</p></div>
+            </div>
+
+            <div class="chocolate">
+                <div class="content">
+                    <img src="chocolate3.jpg" alt="" srcset="">
+                </div>
+                <div class="chocolatename"><p>chocolate3</p></div>
+                </div>
+</div>
+    </div>
+</body>
+</html>
+<script>
+    let input  = document.querySelector("input");
+    let cake = document.querySelectorAll(".cake");
+    let chocolate = document.querySelectorAll(".chocolate");
+    let allbtn = document.querySelectorAll("ul")[0];
+    let cakebtn = document.querySelectorAll("ul")[1];
+    let chocolatebtn = document.querySelectorAll("ul")[2];
+
+    allbtn.style.backgroundColor = "rgb(255, 115, 138)"
+
+    cakebtn.onclick = ()=>{
+        allbtn.style.backgroundColor = "transparent"
+    cakebtn.style.backgroundColor = "rgb(255, 115, 138)"
+    chocolatebtn.style.backgroundColor = "transparent"
+  chocolate.forEach((chocolate,i)=>{
+    document.querySelectorAll(".chocolate")[i].style.display = "none"
+  })
+  cake.forEach((cake,i)=>{
+    document.querySelectorAll(".cake")[i].style.display = "inline"
+  })
+    }
+allbtn.onclick =()=>{
+    allbtn.style.backgroundColor = "rgb(255, 115, 138)"
+    cakebtn.style.backgroundColor = "transparent"
+    chocolatebtn.style.backgroundColor = "transparent"
+    chocolate.forEach((chocolate,i)=>{
+    document.querySelectorAll(".chocolate")[i].style.display = "inline"
+  })
+    cake.forEach((cake,i)=>{
+    document.querySelectorAll(".cake")[i].style.display = "inline"
+  })
+  random()
+  setInterval(()=>{
+ if(allbtncolor != "rgb(255, 115, 138)" ){
+//    clearInterval(intervals)
+console.log(cakebgcolor)
+console.log("notnot")
+    }
+},200)
+
+}
+
+chocolatebtn.onclick = ()=>{
+    allbtn.style.backgroundColor = "transparent"
+    cakebtn.style.backgroundColor = "transparent"
+    chocolatebtn.style.backgroundColor = "rgb(255, 115, 138)"
+  cake.forEach((cake,i)=>{
+    document.querySelectorAll(".cake")[i].style.display = "none"
+  })
+  chocolate.forEach((chocolate,i)=>{
+    document.querySelectorAll(".chocolate")[i].style.display = "inline"
+  })
+    }
+
+
+</script>
